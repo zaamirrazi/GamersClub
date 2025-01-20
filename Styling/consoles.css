@@ -1,0 +1,163 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: #1f1f1f;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1f1f1f;
+    border-radius: 5px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+}
+/* Introduction */
+.index_introduction p {
+    margin: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Consoles Grid */
+.consoles_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.console {
+    text-align: center;
+    background: #292941;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #8a2be2;
+    transition: transform 0.3s;
+}
+
+.console:hover {
+    transform: scale(1.05);
+}
+
+.console img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.price-tag p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+/* Buy Now Button */
+.buy-now {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #45009a, #8a2be2);
+    border: none;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 10px #8a2be2, 0 0 20px #45009a;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buy-now:hover {
+    color: #45009a;
+    background: #fff;
+    box-shadow: 0 0 20px #fff, 0 0 30px #8a2be2;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #292941;
+    padding: 20px;
+    text-align: center;
+    color: #8a2be2;
+}
+
+.footer_logo h1 {
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px #fff;
+}
+
+.footer_follow a {
+    margin: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer_follow a:hover {
+    color: #8a2be2;
+}

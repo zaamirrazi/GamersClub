@@ -1,0 +1,261 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: #1f1f1f;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1f1f1f;
+    border-radius: 5px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+}
+
+/* Hero Section */
+.hero_index {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.hero_index img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.index_introduction {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: -40px;
+}
+
+.index_introduction p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Product Grid Styles */
+.perips_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.perip.items {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.7);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.perip.items:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 153, 1);
+}
+
+.perip img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.price-tag {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.price-tag p {
+    margin: 0;
+}
+
+.perip.items:hover .price-tag {
+    background: rgba(0, 255, 153, 0.7);
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(0, 255, 153, 0.3);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.buy-now, .add-to-cart {
+    background-color: #ff00cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 0, 204, 0.8);
+}
+
+.buy-now:hover, .add-to-cart:hover {
+    background-color: #ff0080;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.8);
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    background: #121212;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+footer .footer_logo h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+}
+
+footer .footer_info {
+    margin-top: 20px;
+}
+
+footer .footer_follow {
+    font-size: 1rem;
+}
+
+footer .footer_follow a {
+    color: #00ff99;
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer .footer_follow a:hover {
+    color: #ff00cc;
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+}
+
+footer .footer_disclaimer p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #121212;
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 1.3rem;
+    }
+
+    nav input[type="checkbox"]:checked ~ #nav-menu ul {
+        display: block;
+    }
+}
